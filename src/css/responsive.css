@@ -1,0 +1,29 @@
+@media (max-width: 768.2px){
+    .container{
+        width: 100%;
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 576.2px){
+    .container{
+        margin-top: 0;
+    }
+    .active .image {
+        width: 80%;
+        padding: 30px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 376.2px){
+    .paragraph {
+        padding: 0 50px;
+    }
+
+    .active .image{
+        margin-bottom: 0;
+        width: 400px;
+        padding-bottom: 0;
+    }
+}

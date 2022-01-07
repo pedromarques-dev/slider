@@ -1,0 +1,130 @@
+body{
+    margin: auto;
+}
+
+.container {
+    background-color: #fff;
+    width: 70%;
+    margin: 200px auto 0;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.425);
+}
+
+.developer {
+    display: none;
+}
+
+.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap-reverse; */
+    padding: 20px;
+}
+
+.active .paragraph {
+    font-size: 23px;
+    width: 470px;
+    position: relative;
+    left: 70px;
+    z-index: 1;
+    background: url('../images/pattern-quotes.svg') top center no-repeat;
+    color: hsl(240, 18%, 77%);
+}
+
+.active .paragraph .dev {
+    margin-top: 20px;
+}
+
+.active .paragraph .dev > strong {
+    color: var(--dark-blue);
+}
+
+.active .paragraph .dev:not(strong){
+    color:rgba(128, 128, 128, 0.404);
+}
+
+.image{
+    width: 45%;
+    height: 370px;
+    background: url('../images/pattern-bg.svg') left center no-repeat;        
+    background-size: contain;
+}   
+
+.image > img {
+    width: 300px;
+    position: relative;
+    top: 30px;
+    left: 40px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.288);
+}
+
+.active .image .buttons {
+    position: relative;
+    bottom: 5px;
+    left: 60px;
+    background-color: #fff;
+    width: max-content;
+    border-radius: 20px;
+    padding: 0 10px;
+}
+
+.active .image .buttons .button-slide {
+    border-style: none;
+    cursor: pointer;
+}
+
+.attribution{
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+}
+
+.attribution a {
+    color: rgb(77, 160, 187);
+}
+
+/* Breakpoints mais comuns de telas a serem considerados: 576px, 768px, 992px e 1200px  */
+
+@media (max-width: 1200.2px) {
+    .container {
+        width: 80%;
+    }
+
+    .paragraph{
+        left: 50px;
+    }
+
+    .image{
+        width: 40%;
+    }
+
+    .image > img{
+        left: 0;
+    }
+}
+
+@media (max-width: 992.2px){
+    .active {
+        flex-wrap: wrap-reverse;
+        text-align: center;
+    }
+
+    .active .paragraph{
+        position: static;
+        width: 100%;
+        padding: 30px;
+        color: var(--dark-blue);
+    }
+
+    .active .image {
+        width: 50%;
+    }
+    
+    .active .image > img{
+        width: 90%;
+    }
+
+    .active .image .buttons {
+        left: 40%;
+    }
+}
